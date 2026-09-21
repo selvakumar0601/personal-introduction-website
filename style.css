@@ -1,0 +1,291 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 18px;
+    color: #dbeafe;
+}
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+.profile {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Main Profile Image */
+
+.profile > img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 6px solid #2563eb;
+    padding: 5px;
+
+    background: #eff6ff;
+}
+
+/* About Content */
+
+.profile div {
+    flex: 1;
+}
+
+.profile h2 {
+    color: #1e3a8a;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.profile p {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+
+/* =========================
+   COMMON SECTION STYLES
+========================= */
+
+.section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+    font-size: 28px;
+    color: #1e3a8a;
+
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+    list-style: none;
+}
+
+.skills li {
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 24px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    background: #1d4ed8;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================
+   HOBBIES
+========================= */
+
+.hobbies {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.hobbies li {
+    background: #eff6ff;
+    color: #1e3a8a;
+
+    padding: 15px 20px;
+    border-radius: 12px;
+
+    font-weight: 500;
+
+    border-left: 5px solid #2563eb;
+
+    transition: 0.3s;
+}
+
+.hobbies li:hover {
+    background: #dbeafe;
+    transform: translateX(5px);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.contact a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+
+    text-align: center;
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .profile > img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile h2 {
+        font-size: 24px;
+    }
+
+    .section {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .hobbies {
+        grid-template-columns: 1fr;
+    }
+
+    .skills li {
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .profile div > img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .skills {
+        gap: 10px;
+    }
+
+    .skills li {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
